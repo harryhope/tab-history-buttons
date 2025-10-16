@@ -1,0 +1,52 @@
+{
+  "name": "tab-history-buttons",
+  "displayName": "Tab History Buttons",
+  "description": "Adds back and forward buttons to the editor tab bar.",
+  "version": "0.0.1",
+  "publisher": "your-publisher",
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "icon": "icon.png",
+  "keywords": ["navigation", "tabs", "history", "back", "forward"],
+  "license": "MIT",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tabHistory.navigateBack",
+        "title": "Navigate Back",
+        "icon": "$(arrow-left)"
+      },
+      {
+        "command": "tabHistory.navigateForward",
+        "title": "Navigate Forward",
+        "icon": "$(arrow-right)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "tabHistory.navigateBack",
+          "group": "navigation@-10",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "tabHistory.navigateForward",
+          "group": "navigation@-9",
+          "when": "editorIsOpen"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.4.0"
+  }
+}
