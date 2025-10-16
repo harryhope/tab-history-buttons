@@ -10,6 +10,7 @@
   "main": "./out/extension.js",
   "icon": "icon.png",
   "keywords": ["navigation", "tabs", "history", "back", "forward"],
+  "repository": "https://github.com/harryhope/tab-history-buttons",
   "license": "MIT",
   "contributes": {
     "commands": [
