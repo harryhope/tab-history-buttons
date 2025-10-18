@@ -1,13 +1,15 @@
 # Tab History Buttons
 
-Adds back and forward buttons to the editor tab bar (title area).
+<img src="screenshot.jpg" alt="An image of Visual Studio Code with tab history buttons" />
 
-- Back: executes `workbench.action.navigateBack`
-- Forward: executes `workbench.action.navigateForward`
+An extension for Visual Studio Code that adds back and forward buttons to the editor tab bar. This is useful when you want to hide the Command Center and save vertical space in the editor window.
 
-## Run
-- npm install
-- Press F5 in VS Code to launch the Extension Development Host
+## Contributing
+To contribute, run:
+```
+npm install
+```
+Then press F5 in VS Code to launch the Extension Development Host
 
 ## Package
 - npm run package
